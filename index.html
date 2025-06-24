@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventPass Port Harcourt - Discover Local Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .bg-nigerian-green {
+            background-color: #008751;
+        }
+        .text-nigerian-green {
+            color: #008751;
+        }
+        .bg-earthtone {
+            background-color: #D35400;
+        }
+        .text-earthtone {
+            color: #D35400;
+        }
+        .btn-earthtone {
+            background-color: #D35400;
+            color: white;
+        }
+        .btn-earthtone:hover {
+            background-color: #A04000;
+        }
+        .border-earthtone {
+            border-color: #D35400;
+        }
+        .focus-earthtone:focus {
+            border-color: #D35400;
+            box-shadow: 0 0 0 3px rgba(211, 84, 0, 0.2);
+        }
+        .bg-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23008751' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .hero-pattern {
+            background-color: #008751;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Hero Section -->
+    <header class="hero-pattern text-white">
+        <div class="container mx-auto px-6 py-16 md:py-24 text-center">
+            <div class="flex justify-center mb-6">
+                <span class="text-4xl font-bold">Event<span class="bg-white text-earthtone px-2 py-1 rounded">Pass</span></span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover Port Harcourt's Best Events</h1>
+            <p class="text-xl md:text-2xl mb-8">Connect with events that match your interests and meet like-minded people</p>
+            <button class="bg-white text-earthtone font-bold rounded-full px-8 py-3 shadow-lg hover:bg-gray-100 transition duration-300" onclick="document.getElementById('signup').scrollIntoView({behavior: 'smooth'})">
+                Join Waitlist
+            </button>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Why EventPass?</h2>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div class="bg-green-100 inline-block p-4 rounded-full mb-4">
+                        <i class="fas fa-compass text-nigerian-green text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Discover Local Events</h3>
+                    <p class="text-gray-600">Find shows, game nights, art exhibitions, and parties that match your interests</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-100 inline-block p-4 rounded-full mb-4">
+                        <i class="fas fa-users text-nigerian-green text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Connect With Others</h3>
+                    <p class="text-gray-600">Meet people who share your passions and build your community</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-green-100 inline-block p-4 rounded-full mb-4">
+                        <i class="fas fa-star text-nigerian-green text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Become a Host</h3>
+                    <p class="text-gray-600">Create and manage your own events, reach your target audience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-16 bg-gray-50 bg-pattern">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">How EventPass Works</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-earthtone font-bold text-xl mb-2">01</div>
+                    <h3 class="font-bold text-xl mb-2">Create Your Profile</h3>
+                    <p class="text-gray-600">Tell us about your interests, and we'll personalize your event feed</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-earthtone font-bold text-xl mb-2">02</div>
+                    <h3 class="font-bold text-xl mb-2">Discover Events</h3>
+                    <p class="text-gray-600">Browse events by category, location, or date that match your preferences</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-earthtone font-bold text-xl mb-2">03</div>
+                    <h3 class="font-bold text-xl mb-2">Join or Host</h3>
+                    <p class="text-gray-600">Attend events or create your own to share with the community</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist Signup -->
+    <section id="signup" class="py-16 bg-white">
+        <div class="container mx-auto px-6 max-w-lg">
+            <h2 class="text-3xl font-bold text-center mb-2">Get Early Access to EventPass</h2>
+            <p class="text-center text-gray-600 mb-8">Join our waitlist to be the first to know when we launch in Port Harcourt</p>
+            
+            <form id="waitlistForm" class="bg-gray-50 p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                    <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-nigerian-green" required>
+                </div>
+                
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 mb-2">Email Address</label>
+                    <input type="email" id="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-nigerian-green" required>
+                </div>
+                
+                <div class="mb-6">
+                    <label for="phone" class="block text-gray-700 mb-2">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-nigerian-green">
+                </div>
+                
+                <div class="mb-6">
+                    <p class="block text-gray-700 mb-2">I'm interested in: (Select all that apply)</p>
+                    <div class="grid grid-cols-2 gap-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2 text-earthtone">
+                            <span>Music & Shows</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2 text-earthtone">
+                            <span>Art & Culture</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2 text-earthtone">
+                            <span>Food & Drinks</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2 text-earthtone">
+                            <span>Sports & Games</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2 text-earthtone">
+                            <span>Business & Networking</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2 text-earthtone">
+                            <span>Hosting Events</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="w-full bg-nigerian-green text-white font-bold py-3 rounded-lg hover:bg-green-800 transition duration-300">
+                    Join Waitlist
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-6">
+                    <h3 class="font-bold text-xl mb-2">When will EventPass launch in Port Harcourt?</h3>
+                    <p class="text-gray-600">We're planning to launch in Q3 2025. Waitlist members will get early access to our beta version.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-bold text-xl mb-2">Is it free to use?</h3>
+                    <p class="text-gray-600">Yes, EventPass will be free for event attendees. Event hosts will have free basic listings with premium options available.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-bold text-xl mb-2">How can I become an event host?</h3>
+                    <p class="text-gray-600">Select "Hosting Events" when signing up for the waitlist, and we'll provide you with early access to our host tools.</p>
+                </div>
+                
+                <div class="mb-6">
+                    <h3 class="font-bold text-xl mb-2">Will you expand to other cities?</h3>
+                    <p class="text-gray-600">We're starting with Port Harcourt to build a strong local community. Expansion plans will be announced after our initial launch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold">Event<span class="bg-white text-earthtone px-2 py-1 rounded">Pass</span></h2>
+                    <p class="text-gray-400">Port Harcourt's Premier Event Discovery Platform</p>
+                </div>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <hr class="border-gray-700 my-8">
+            
+            <div class="text-center text-gray-400 text-sm">
+                <p>&copy; 2025 EventPass Port Harcourt. All rights reserved.</p>
+                <p class="mt-2">
+                    <a href="#" class="hover:text-white">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-white">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg p-8 max-w-md">
+            <h3 class="text-2xl font-bold mb-4">Thank You!</h3>
+            <p class="mb-6">You've been added to our waitlist. We'll notify you when EventPass launches in Port Harcourt.</p>
+            <button onclick="closeModal()" class="w-full bg-nigerian-green text-white font-bold py-3 rounded-lg hover:bg-green-800 transition duration-300">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('waitlistForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your backend
+            // For this demo, we'll just show the success modal
+            document.getElementById('successModal').classList.remove('hidden');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        function closeModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
