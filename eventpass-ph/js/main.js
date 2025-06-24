@@ -1,5 +1,5 @@
-import { db, collection, addDoc, getDocs } from './firebase.js';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+import { db, auth, collection, addDoc, getDocs } from './firebase.js';
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
 
 document.getElementById('waitlistForm').addEventListener('submit', async function(e) {
   e.preventDefault();
@@ -9,11 +9,18 @@ document.getElementById('waitlistForm').addEventListener('submit', async functio
   const interests = Array.from(document.querySelectorAll('input[type=checkbox]:checked')).map(cb => cb.nextElementSibling.textContent);
 
   try {
-    await addDoc(collection(db, 'waitlist'), { name, email, phone, interests });
+    await addDoc(collection(db, 'waitlist'), {
+      name,
+      email,
+      phone,
+      interests,
+      timestamp: new Date()
+    });
     document.getElementById('successModal').classList.remove('hidden');
     this.reset();
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error adding document: ', error);
+    alert('Failed to join waitlist. Please try again.');
   }
 });
 

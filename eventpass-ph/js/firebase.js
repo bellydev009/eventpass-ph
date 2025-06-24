@@ -1,18 +1,21 @@
-// Firebase configuration and initialization
-// Replace the below config with your own Firebase project config
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
+// js/firebase.js
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+import { getFirestore, collection, addDoc, getDocs } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js';
+import { getAuth } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js';
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  // Paste your firebaseConfig from Step 1 here
+  apiKey: "AIzaSyC4G3Z6dX4Z0ydofOg8ADp414-QjUdEWNg",
+  authDomain: "eventpass-ph.firebaseapp.com",
+  projectId: "eventpass-ng",
+  storageBucket: "eventpass-ng.firebasestorage.app",
+  messagingSenderId: "669281256667",
+  appId: "1:669281256667:web:3f020a50342c4c655738fe"
+      measurementId: "G-XBT8Z192G6"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+const auth = getAuth(app);
 
-export { db, collection, addDoc, getDocs };
+export { db, auth, collection, addDoc, getDocs };
