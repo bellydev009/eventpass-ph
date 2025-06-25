@@ -25,7 +25,7 @@ document.getElementById('waitlistForm').addEventListener('submit', async functio
 });
 
 async function displayEvents() {
-  const eventList = document.querySelector('.event-list'); // Add this class to your events grid
+  const eventList = document.querySelector('.event-grid');
   const querySnapshot = await getDocs(collection(db, 'events'));
   eventList.innerHTML = '';
   querySnapshot.forEach(doc => {
@@ -40,6 +40,30 @@ async function displayEvents() {
     `;
   });
 }
+
+// Fetch and display events from Firestore
+document.addEventListener('DOMContentLoaded', async function() {
+  const eventGrid = document.querySelector('.event-grid');
+  if (!eventGrid) return;
+  try {
+    const querySnapshot = await getDocs(collection(db, 'events'));
+    eventGrid.innerHTML = '';
+    querySnapshot.forEach(doc => {
+      const event = doc.data();
+      eventGrid.innerHTML += `
+        <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+          <h3 class="font-bold text-xl mb-2">${event.title || ''}</h3>
+          <p class="text-gray-600">${event.date || ''} | ${event.location || ''}</p>
+          <p class="text-gray-600">${event.description || ''}</p>
+          <button class="mt-4 btn-earthtone px-4 py-2 rounded-lg">Learn More</button>
+        </div>
+      `;
+    });
+  } catch (error) {
+    eventGrid.innerHTML = '<p class="text-center text-red-500">Failed to load events.</p>';
+    console.error('Error fetching events:', error);
+  }
+});
 
 document.addEventListener('DOMContentLoaded', displayEvents);
 
